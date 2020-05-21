@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #354C5A;
+        }
+        div {
+            display: inline-block;
+        }
+        .div div {
+            margin: 0 20px;
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 120px;
+            background-color: white;
+            transition: .5s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .div div::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: #B89860;
+            position: absolute;
+            left: -200px;
+            transition: 1s;
+            transform: translateY(240px) rotate(45deg);
+            border-radius: 50px;
+            z-index: -1;
+           
+        }
+        .fa {
+            font-size: 40px;
+            transition: 1.7s;
+        }
+        .fa-facebook {
+            color: #4078c0;
+        }
+        .fa-twitter {
+            color: #00a4e4;
+        }
+        .fa-github {
+            color: #000000;
+        }
+       
+        .div div:hover::before {
+            left: 0px;
+            transform: translateY(0px) scale(0.9);
+            transform: skew(#00a4e4);
+
+        }
+          .div div:hover > .fa{
+          color:white;
+          }
+          .toTop {
+              position: fixed;
+              width: 40px;
+              height: 40px;
+              background-color: cornsilk;
+              right: 40px;
+              bottom: 40px;
+              z-index: 1000;
+              text-align: center;
+              border-radius: 20px;
+             
+          }
+          .toTop i {
+            line-height: 35px;
+            font-size: 25px;
+          }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="div">
+            <a href="#"><div><i class="fa fa-facebook"></i></div></a>
+            <a href="#"> <div><i class="fa fa-twitter"></i></div></a>
+            <a href="#"> <div><i class="fa fa-github"></i></div></a>
+
+        </div>
+    </section>
+    <div class="toTop">
+        <i class="fa fa-caret-up"></i>
+    </div>
+
+</body>
+</html>
